@@ -5,21 +5,21 @@ using namespace std;
 
 
 bool isPossible(int grid[][N], int row, int col, int num){
-    //Safe in row
+    
     for (int i = 0; i < N; i++){
         if (grid[row][i] == num){
             return false;
         }
     }
 
-    //Safe in column
+    
     for (int i = 0; i < N; i++){
         if (grid[i][col] == num){
             return false;
         }
     }
 
-    //Safe in block
+    
     int rowFactor = row - (row % 3);
     int colFactor = col - (col % 3);
     for (int i = 0; i < 3; i++){
